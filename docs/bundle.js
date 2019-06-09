@@ -2864,14 +2864,16 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     document.getElementById('messages').textContent += data + '\n'
   })
 
-  peer.on('stream', function (stream) {
+  /*peer.on('stream', function (stream) {
     var video = document.createElement('video')
     document.body.appendChild(video)
 
     //video.src = window.URL.createObjectURL(stream)
     video.srcObject = stream
     video.play()
+    
   })
+  */
 })
 
 if ('serviceWorker' in navigator) {
