@@ -1,0 +1,17 @@
+{
+    "name": "Peer2Peer Video Chat",
+    "short_name": "p2pVideoChat",
+    "display": "standalone",
+    "start_url": ".",
+    "scope": "/p2pVideoChat/",
+    "background_color": "#ffffff",
+    "theme_color": "#ffffff",
+    "description": "Simple P2P Video Chat with WebRTC",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
