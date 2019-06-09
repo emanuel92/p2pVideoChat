@@ -31,11 +31,12 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
 
   document.getElementById('send').addEventListener('click', function () {
     var yourMessage = document.getElementById('yourMessage').value
+    document.getElementById('messages').textContent += 'Du: ' + yourMessage + '\n'
     peer.send(yourMessage)
   })
 
   peer.on('data', function (data) {
-    document.getElementById('messages').textContent += data + '\n'
+    document.getElementById('messages').textContent += 'Partner: ' + data + '\n'
   })
 
   peer.on('stream', function (stream) {
