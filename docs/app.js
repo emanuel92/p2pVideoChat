@@ -33,6 +33,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     var yourMessage = document.getElementById('yourMessage').value
     document.getElementById('messages').textContent += 'Du: ' + yourMessage + '\n'
     peer.send(yourMessage)
+    document.getElementById('yourMessage').value = "";
   })
 
   peer.on('data', function (data) {
