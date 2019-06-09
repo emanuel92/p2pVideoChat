@@ -9,7 +9,7 @@ self.addEventListener('install', (event) => {
                 'bundle.js',
                 'manifest.webmanifest',
                 'icons/android-chrome-192x192.png',
-                'icons/apple-touch.png',
+                'icons/apple-touch-icon.png',
                 'icons/browserconfig.xml',
                 'icons/favicon-16x16.png',
                 'icons/favicon-32x32.png',
