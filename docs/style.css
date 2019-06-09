@@ -1,7 +1,83 @@
+/*<label>Your ID:</label><br/>
+<textarea id="yourId"></textarea><br/>
+<label>Other ID:</label><br/>
+<textarea id="otherId"></textarea>
+<button id="connect">connect</button><br/>
+
+<label>Enter Message:</label><br/>
+<textarea id="yourMessage"></textarea>
+<button id="send">send</button>
+<pre id="messages"></pre>*/
+
+
 body {
-    margin: 0;
-    background: #ccffcc;
+    margin: 30px;
+    background: #ffffff;
     font-family: sans-serif;
+}
+
+label {
+    color: #1fc5c9;
+    font-size: 1.5 em;
+}
+
+#partnerId {
+    float: right;
+}
+
+textarea {
+    width: 30%;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+#otherId {
+    float: right;
+}
+
+button {
+    background-color: #1fc5c9;
+    width: 20%;
+    min-height: 50px;
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 0.813em;
+}
+
+button:hover {
+    background-color: white; 
+    color: black; 
+    border: 2px solid #1fc5c9;
+}
+
+#copyOtherId {
+    float: right;
+}
+
+.connect {
+    width: 25%;
+    position: absolute;
+    margin-top: 5px;
+    left: 37.5%;
+}
+
+#yourMessage {
+    width: 75%;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+#send {
+    float: right;
+    margin-top: 5px;
+}
+
+#messages {
+    color: #1fc5c9;
+    font-size: 0.8em;
 }
 
 h1 {
@@ -10,29 +86,4 @@ h1 {
 
 main {
     padding: 10px;
-}
-
-section {
-    border: 1px solid black;
-    padding: 5px;
-    margin-bottom: 5px;
-    display: flex;
-    justify-content: space-between;
-}
-
-section input {
-    border: 1px solid #aaa;
-    padding: 3px;
-    flex: 0 1 70%;
-}
-
-section select {
-    flex: 0 1 25%;
-}
-
-button {
-    border: 1px solid black;
-    background: white;
-    width: 100%;
-    padding: 8px;
 }

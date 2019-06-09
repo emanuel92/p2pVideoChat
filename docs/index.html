@@ -19,15 +19,17 @@
   </head>
   <body>
 
-    <label>Your ID:</label><br/>
-    <textarea id="yourId"></textarea><br/>
-    <label>Other ID:</label><br/>
-    <textarea id="otherId"></textarea>
-    <button id="connect">connect</button><br/>
+    <label id="myId">Meine ID:</label>
+    <label id="partnerId">Partner ID:</label><br/>
+    <textarea id="yourId" rows="3"></textarea>
+    <button id="connect" class="connect">Verbinden</button>
+    <textarea id="otherId" rows="3""></textarea><br />
+    <button id="copyMyId" class="yourId">Kopieren</button>
+    <button id="copyOtherId" class="otherId">Kopieren</button><br/><br/>
 
-    <label>Enter Message:</label><br/>
-    <textarea id="yourMessage"></textarea>
-    <button id="send">send</button>
+    <label id="msg">Nachricht</label><br/>
+    <textarea id="yourMessage" rows="3"></textarea>
+    <button id="send">Senden</button>
     <pre id="messages"></pre>
   </body>
 </html>

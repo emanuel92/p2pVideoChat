@@ -2855,6 +2855,16 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     peer.signal(otherId)
   })
 
+  document.getElementById('copyMyId').addEventListener('click', function () {
+    document.getElementById("yourId").select();
+    document.execCommand("copy");
+  })
+
+  document.getElementById('copyOtherId').addEventListener('click', function () {
+    document.getElementById("otherId").select();
+    document.execCommand("copy");
+  })
+
   document.getElementById('send').addEventListener('click', function () {
     var yourMessage = document.getElementById('yourMessage').value
     peer.send(yourMessage)
@@ -2874,6 +2884,7 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     
   })
 })
+
 
 if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('sw.js')
