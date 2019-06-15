@@ -57,6 +57,11 @@ button:hover {
     float: right;
 }
 
+#state {
+    width: 25%;
+    position: absolute;
+    left: 37.5%;}
+
 .connect {
     width: 25%;
     position: absolute;
