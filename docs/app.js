@@ -7,6 +7,8 @@ function settingHomepage() {
   }
 }
 
+//----------------WebRTC--------------
+
 //Auf Kamera und Mikrofon zugreifen
 var getUserMedia = require('getusermedia')
 
@@ -25,8 +27,21 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
   peer.on('signal', function (data) {
     document.getElementById('yourId').value = JSON.stringify(data)
   })
+  
+  //Videostream des Partners anzeigen
+  peer.on('stream', function (stream) {
+    var video = document.createElement('video')
+    document.body.appendChild(video)
+    video.srcObject = stream
+    video.play()
+  })
 
+  //Nachrichten anzeigen
+  peer.on('data', function (data) {
+    document.getElementById('messages').textContent += 'Partner: ' + data + '\n'
+  })
 
+// EventListener & Buttons
   //Funktion des Verbinden-Buttons
   document.getElementById('connect').addEventListener('click', function () {
     var otherId = JSON.parse(document.getElementById('otherId').value)
@@ -88,19 +103,6 @@ getUserMedia({ video: true, audio: false }, function (err, stream) {
     //eigene Nachrichten anzeigen und nach Senden aus Textarea löschen
     document.getElementById('messages').textContent += 'Du: ' + yourMessage + '\n'
     document.getElementById('yourMessage').value = "";
-  })
-
-  //Nachrichten anzeigen
-  peer.on('data', function (data) {
-    document.getElementById('messages').textContent += 'Partner: ' + data + '\n'
-  })
-
-  //Videostream des Partners anzeigen
-  peer.on('stream', function (stream) {
-    var video = document.createElement('video')
-    document.body.appendChild(video)
-    video.srcObject = stream
-    video.play()
   })
 })
 
